@@ -1002,3 +1002,94 @@ dialog img {
 
 }
 
+/* ---------- Forms (.fm): used on Support and Contact ---------- */
+
+.fm {
+    background:#fff;
+    border:1px solid var(--ln);
+    border-radius:3px;
+    padding:28px;
+}
+
+.fm .in {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px 24px;
+}
+
+.fm .full {
+    grid-column:1 / -1;
+}
+
+.fm label {
+    display:block;
+    font-weight:600;
+    color:var(--ink);
+    font-size:15px;
+    margin-bottom:4px;
+}
+
+.fm label i {
+    font-style:normal;
+    color:#b3261e;
+}
+
+.fm input,
+.fm select,
+.fm textarea {
+    width:100%;
+    font:inherit;
+    padding:10px 12px;
+    border:1px solid #b9aad6;
+    border-radius:3px;
+    background:#fff;
+    color:var(--ink);
+}
+
+.fm textarea {
+    min-height:120px;
+    resize:vertical;
+}
+
+.fm input:focus,
+.fm select:focus,
+.fm textarea:focus {
+    outline:3px solid var(--o);
+    outline-offset:0;
+    border-color:var(--p);
+}
+
+.fm [aria-invalid=true] {
+    border-color:#b3261e;
+}
+
+.er {
+    color:#b3261e;
+    font-size:14px;
+    min-height:1px;
+    margin:3px 0 0;
+}
+
+.fm .act {
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.fm .msg {
+    font-size:15px;
+    margin:0;
+    max-width:520px;
+}
+
+@media (max-width:860px) {
+    .fm .in {
+        grid-template-columns:1fr;
+    }
+
+    .fm {
+        padding:20px;
+    }
+
+}

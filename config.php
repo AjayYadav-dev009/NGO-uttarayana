@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Site-wide settings. Edit contact details, registration numbers and the
  * navigation here once and every page (header + footer) updates.
@@ -20,7 +21,7 @@ const NAV = [
     'about'    => ['About us',           'about'],
     'programs' => ['Programs & Impact',  'programs'],
     'support'  => ['Support Us',         'support'],
-    'contact'  => ['Contact',            null],        // no contact page yet: shows as "#"
+    'contact'  => ['Contact',            'contact'],
 ];
 
 /* Header "Donate" button */
@@ -45,3 +46,8 @@ const FOOTER_REGISTRATION = [
 
 const FOOTER_OFFICE   = 'Village Maat, Kasardevi, Post: Dinapani, Almora, Uttarakhand 263601';
 const FOOTER_HOSPITAL = 'Village Bhalura, Post: NTD, Papershailly, Almora, Uttarakhand 263601';
+
+/* Contact page */
+const CONTACT_PHONE = '98106 01252';
+const MAP_QUERY     = 'Uttarayana Hospital, Papershailly, Almora, Uttarakhand';   // what the Google map shows
+const CONTACT_IMAGE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/uttarayana-faith-foundation-tNiry7UUvq3qfvPc.png';

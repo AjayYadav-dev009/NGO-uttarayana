@@ -1,0 +1,94 @@
+/* Contact page only */
+
+.cg {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:stretch;
+}
+
+.cg h2 {
+    margin-bottom:10px;
+}
+
+.cimg {
+    width:100%;
+    height:100%;
+    min-height:340px;
+    object-fit:cover;
+    border-radius:3px;
+    background:var(--pl);
+}
+
+.fi h3 {
+    font-size:21px;
+    margin:22px 0 4px;
+}
+
+.fi p {
+    margin:0;
+}
+
+.fi .cd {
+    margin-top:22px;
+}
+
+.fi a {
+    color:var(--p);
+    font-weight:600;
+}
+
+.fi a:hover {
+    text-decoration:underline;
+}
+
+.mp {
+    position:relative;
+    min-height:340px;
+    border:1px solid var(--ln);
+    border-radius:3px;
+    overflow:hidden;
+    background:#fff;
+}
+
+.mp iframe {
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+.mp .open {
+    position:absolute;
+    top:12px;
+    left:12px;
+    padding:7px 14px;
+    background:#fff;
+    color:var(--p);
+    font-weight:600;
+    font-size:15px;
+    border-radius:3px;
+    box-shadow:0 1px 4px rgba(0,0,0,.25);
+}
+
+.mp .open:hover {
+    background:var(--pl);
+}
+
+@media (max-width:860px) {
+    .cg {
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .cimg {
+        min-height:220px;
+        height:260px;
+    }
+
+    .mp {
+        min-height:300px;
+    }
+
+}
