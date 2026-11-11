@@ -3,6 +3,7 @@
 This file is the briefing for any AI agent (or developer) working on this project. Read it fully before changing anything. It replaces the need to re-explain the project in every prompt. **After every change, update the "Update log" at the bottom.**
 
 ## 1. Project in one paragraph
+
 Website for **Uttarayana Foundation** (NGO, Almora, Uttarakhand; healthcare and girls' education since 1999), built for a client. Plain **PHP 7.4+**, no database, no framework, no build step. Pages share **one header and one footer** (`includes/`), **one global stylesheet** and **one global script**. Fonts are **self-hosted (Mukta)**. The original design was four static HTML pages that were converted to this structure; keep the visual design identical unless the user asks for a change.
 
 ## 2. File map
@@ -30,6 +31,7 @@ AGENTS.md               this file
 ```
 
 ## 3. Hard rules (do not break)
+
 1. **Never copy the header, footer, `<head>` or scripts into a page.** Pages contain only their own content between `require INC.'/header.php'` and `require INC.'/footer.php'`.
 2. **Site-wide text lives in `config.php`** (phone, email, nav, footer, addresses, registration numbers). Never hard-code these in a page. If a fact is needed on a page, add or reuse a constant.
 3. **Links:** `<?= url('about', 'journey') ?>` (slug from `NAV`). **Assets:** `<?= asset('img/programs/x.jpg') ?>`. Never type `about.php` or `/assets/...` by hand (the site must work in a sub-folder).
@@ -70,29 +72,30 @@ Every `<section>` is `<section id="..."><div class="w">…</div></section>`. `.w
 **Font:** Mukta 17px/1.6 (400/600/700). Headings: h1–h4 `--ink`; `h2` is purple 34px.
 **Section rhythm:** `section{padding:72px 0}` (48px on mobile ≤860px). Alternate backgrounds with `style="background:var(--pl)"`. Breakpoints: 860px (main), 480px (small), 1100px (index impact grid).
 
-| Need | Use |
-|---|---|
-| Container | `.w` |
-| Intro line under a heading | `p.sub` |
-| Big intro paragraph | `p.lead` |
-| Buttons | `.btn` (orange) · `.btn.p` (purple) · `.btn.o` (outline on dark) |
-| Purple call-to-action band with 3 links | `.inv` with `.row` (links Donate / Volunteer / Partner) |
-| Stat tiles | `.grid8` (+ `.three` for 3 cols, `.ten` index only) containing `.t`; animated number: `<span class="num" data-target="250" data-suffix="+" aria-hidden="true">250+</span><span class="sr">250+</span>` |
-| Page banner + breadcrumb | `$page['hero']` (renders `.ph`, `.crumb`) |
-| "On this page" sticky menu | `$page['subnav']` (renders `.sn`; scroll-spy in main.js) |
-| Card slider | `.sl` > `.tr` with `.pg` (programme cards) or `.nw` (news cards) + `.pv`/`.nx` buttons |
-| Program rows | `.pr` (+ `.alt`, `.rev`), `.media`, `.trio` |
-| Photo with lightbox | `<button class="zm" data-cap="...">` wrapping an `img`; needs the `<dialog id="lb">` markup from programs.php and `programs.js` behaviour |
-| Journey/timeline list | `.jv` (`#jv li` dots fill on scroll) |
-| Copy-to-clipboard row | `.rw` with `<button class="cp" data-copy="VALUE">Copy</button>` and `<p id="cpmsg" role="status" class="sr">` somewhere on the page |
-| Tabs | `.tabs` with `role=tab` buttons (see support.php + support.js) |
-| Forms | `<form class="fm" novalidate data-kind="Contact">` > `.in` (2-col grid) > `div` (use `.full` for full width) with `label` (+ `<i>*</i>` for required) and input; every required field needs `<p class="er"></p>` in the same div; submit row `.full.act` with `button.btn.p` and `p.msg[role=status]`. Behaviour is in main.js: validates, then opens the visitor's email app (`mailto:`) with the data. |
+| Need                                    | Use                                                                                                                                                                                                                                                                                                                                                                                                      |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Container                               | `.w`                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Intro line under a heading              | `p.sub`                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Big intro paragraph                     | `p.lead`                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Buttons                                 | `.btn` (orange) · `.btn.p` (purple) · `.btn.o` (outline on dark)                                                                                                                                                                                                                                                                                                                                         |
+| Purple call-to-action band with 3 links | `.inv` with `.row` (links Donate / Volunteer / Partner)                                                                                                                                                                                                                                                                                                                                                  |
+| Stat tiles                              | `.grid8` (+ `.three` for 3 cols, `.ten` index only) containing `.t`; animated number: `<span class="num" data-target="250" data-suffix="+" aria-hidden="true">250+</span><span class="sr">250+</span>`                                                                                                                                                                                                   |
+| Page banner + breadcrumb                | `$page['hero']` (renders `.ph`, `.crumb`)                                                                                                                                                                                                                                                                                                                                                                |
+| "On this page" sticky menu              | `$page['subnav']` (renders `.sn`; scroll-spy in main.js)                                                                                                                                                                                                                                                                                                                                                 |
+| Card slider                             | `.sl` > `.tr` with `.pg` (programme cards) or `.nw` (news cards) + `.pv`/`.nx` buttons                                                                                                                                                                                                                                                                                                                   |
+| Program rows                            | `.pr` (+ `.alt`, `.rev`), `.media`, `.trio`                                                                                                                                                                                                                                                                                                                                                              |
+| Photo with lightbox                     | `<button class="zm" data-cap="...">` wrapping an `img`; needs the `<dialog id="lb">` markup from programs.php and `programs.js` behaviour                                                                                                                                                                                                                                                                |
+| Journey/timeline list                   | `.jv` (`#jv li` dots fill on scroll)                                                                                                                                                                                                                                                                                                                                                                     |
+| Copy-to-clipboard row                   | `.rw` with `<button class="cp" data-copy="VALUE">Copy</button>` and `<p id="cpmsg" role="status" class="sr">` somewhere on the page                                                                                                                                                                                                                                                                      |
+| Tabs                                    | `.tabs` with `role=tab` buttons (see support.php + support.js)                                                                                                                                                                                                                                                                                                                                           |
+| Forms                                   | `<form class="fm" novalidate data-kind="Contact">` > `.in` (2-col grid) > `div` (use `.full` for full width) with `label` (+ `<i>*</i>` for required) and input; every required field needs `<p class="er"></p>` in the same div; submit row `.full.act` with `button.btn.p` and `p.msg[role=status]`. Behaviour is in main.js: validates, then opens the visitor's email app (`mailto:`) with the data. |
 
 ## 6. Common tasks (checklists)
 
 **Change phone / email / address / registration numbers / menu / footer** → edit `config.php` only.
 
 **Add a page**
+
 1. Copy `contact.php` (or `support.php`) → `newpage.php`; edit `$page` and content.
 2. Add to `NAV` in `config.php`: `'newpage' => ['Label', 'newpage'],` (and to `FOOTER_LINKS` if it should be in the footer).
 3. Page-only CSS/JS → new files in `assets/css/pages/` / `assets/js/pages/`, listed in `$page`.
@@ -109,6 +112,7 @@ Every `<section>` is `<section id="..."><div class="w">…</div></section>`. `.w
 **Contact page map** → `MAP_QUERY` in `config.php` (Google embed by search text, no API key). Contact image → `CONTACT_IMAGE` in `config.php` (replace with a local `asset()` file when the client supplies the hospital photo).
 
 ## 7. How to deliver changes (important)
+
 - **Send only the files you created or changed**, each with its full relative path (e.g. `assets/css/pages/contact.css`). **Never zip or resend the whole project.**
 - For every file say whether it is **new** or **replaces** an existing one.
 - Edit the existing files rather than rewriting from scratch; do not reformat untouched code.
@@ -116,12 +120,14 @@ Every `<section>` is `<section id="..."><div class="w">…</div></section>`. `.w
 - Do not invent client facts (numbers, names, addresses, phone numbers). Use only what the user or the client material states; flag assumptions.
 
 ## 8. Checking your work
+
 - No PHP binary may be available in the sandbox. If `php` exists run `php -l` on every changed `.php`; otherwise re-read each changed PHP file for syntax (matching `<?= ?>`, quotes, semicolons).
 - JS: `node --check` each changed `.js` file.
 - Confirm every `url()` slug exists in `NAV`, every `asset()` file exists, every `subnav` key has a matching section `id`, and every page's `'css'`/`'js'` names have files.
 - Ask the user to test in a browser at desktop and ≤860px width, and to click through all pages.
 
 ## 9. Known placeholders / open items
+
 - Header and footer are shared by design; if the client wants a different header/footer on some page, discuss before changing `includes/`.
 - Logo and most photos load from `assets.zyrosite.com` (should be downloaded to `assets/img/`).
 - Home page news cards (`.nw`) link to `#` (real article URLs needed).
@@ -131,9 +137,11 @@ Every `<section>` is `<section id="..."><div class="w">…</div></section>`. `.w
 - Contact page uses a stand-in photo; the client's own hospital satellite image can replace it.
 
 ## 10. Client facts (safe to reuse)
+
 Name: Uttarayana Foundation · Registered under the Societies Registration Act, 1860 · 80G & 12A approved · R.NO UK06408072019001690 · DARPAN ID UK/2025/0857139 · 80G AAATU5730HF20215 · 12A AAATU5730HE20142 · Hospital: Village Bhalura, Post NTD, Papershailly, Almora 263601 · Registered office: Village Maat, Kasardevi, Post Dinapani, Almora 263601 · Programmes: Uttarayana Hospital, Health on Wheels, Happy Heart (free heart surgery with the National Heart Institute, Delhi), Nai-Umang (girls' education). Everything else is in `config.php` and the page files.
 
 ## 11. Update log (append a line for every change; newest last)
+
 - Initial conversion of the 4 static pages (index, about, programs, support) to PHP with shared includes, split CSS/JS, extracted base64 images to `assets/img/`, self-hosted font setup.
 - Home "Our Impact": added tiles "300 families financially assisted" and "> 10,000 ft above sea level (Adi Kailash–Gunji)", 1999/2013 milestone badges; grid now 10 tiles (`.grid8.ten`) in `index.php` + `pages/index.css`.
 - Handoff guide for humans written as a Claude Doc ("Uttarayana Foundation Website: Handoff Guide").

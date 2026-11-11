@@ -12,7 +12,7 @@ $page = [
 require INC . '/header.php';
 ?>
 <section class="hero">
-    <div class="w">
+    <div class="w hero-w">
         <h1>Supporting Rural Communities Through Healthcare and Education.</h1>
         <p>Rooted in Uttarakhand’s villages since 1999, we bring affordable primary and secondary healthcare,
             life-saving heart treatment and education for girls.</p>
