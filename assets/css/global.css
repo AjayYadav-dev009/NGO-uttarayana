@@ -108,7 +108,7 @@ h4 {
 }
 
 section {
-    padding:40px 0;
+    padding:72px 0;
 }
 
 h2 {
@@ -867,7 +867,7 @@ dialog img {
         scroll-padding-top:130px;
     }
 
-    .top span+span {
+    .top .em {
         display:none;
     }
 
@@ -1092,4 +1092,30 @@ dialog img {
         padding:20px;
     }
 
+}
+
+/* ---------- Language switch in the top bar ---------- */
+
+.top .r {
+    display:flex;
+    align-items:center;
+}
+
+.top .em::after {
+    content:"|";
+    margin:0 10px;
+}
+
+.top .lg a {
+    color:inherit;
+}
+
+.top .lg a:hover {
+    text-decoration:underline;
+}
+
+.top .lg a[aria-current=true] {
+    font-weight:700;
+    text-decoration:underline;
+    text-underline-offset:3px;
 }

@@ -37,8 +37,8 @@ html {
     background:linear-gradient(90deg,rgba(47,26,84,.92) 0%,rgba(47,26,84,.7) 45%,rgba(47,26,84,.1) 100%),url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/uyzQ6zhWkYkr7bfm/uttarayana-faith-foundation-tNiry7UUvq3qfvPc.png) center/cover;
 }
 
-.hero-w {
-    margin:0 ;
+.hero .w {
+    width:100%;
 }
 
 .hero h1 {
@@ -93,74 +93,15 @@ html {
     color:var(--p);
 }
 
-.aw {
-    background:var(--pl);
-}
-
 .two {
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:56px;
 }
 
-.aw h3 {
-    font-size:24px;
-    margin-bottom:18px;
-    color:var(--pd);
-}
-
-ul.tl {
-    list-style:none;
-    margin:0;
-    padding:0;
-}
-
-.tl li {
-    display:grid;
-    grid-template-columns:92px 1fr;
-    gap:16px;
-    padding:16px 0;
-    border-top:1px solid #d6cbe9;
-}
-
-.tl b {
-    color:var(--p);
-    font-size:20px;
-}
-
-.tl h4 {
-    font-size:18px;
-}
-
-.tl p {
-    margin:2px 0 0;
-    font-size:15px;
-}
-
 .pg,
 .nw {
     flex:0 0 calc((100% - 48px)/3);
-}
-
-.scr {
-    max-height:360px;
-    overflow-y:auto;
-    padding-right:12px;
-    scrollbar-width:thin;
-    scrollbar-color:var(--p) #e3daf2;
-}
-
-.scr::-webkit-scrollbar {
-    width:8px;
-}
-
-.scr::-webkit-scrollbar-thumb {
-    background:var(--p);
-    border-radius:4px;
-}
-
-.scr::-webkit-scrollbar-track {
-    background:#e3daf2;
 }
 
 .fd {
@@ -197,18 +138,78 @@ ul.tl {
     line-height:1.1;
 }
 
-.q {
-    flex:0 0 100%;
-    border-left:4px solid var(--p);
-    padding:6px 48px 6px 24px;
-    font-size:21px;
+.tst {
+    margin-top:28px;
 }
 
-.q small {
-    display:block;
-    margin-top:12px;
-    font-size:15px;
+.q {
+    flex:0 0 calc((100% - 48px)/3);
+    display:flex;
+    flex-direction:column;
+    margin:0;
+    padding:30px 28px 26px;
+    background:var(--pl);
+    border:1px solid var(--ln);
+    border-bottom:4px solid var(--p);
+    border-radius:3px;
+}
+
+.q blockquote {
+    margin:0 0 26px;
+    font-size:18px;
+    line-height:1.6;
     color:var(--ink);
+}
+
+.q blockquote::before {
+    content:"“";
+    content:"“" / "";
+    display:block;
+    height:36px;
+    font:700 76px/.8 Georgia,serif;
+    color:var(--o);
+}
+
+.q.story blockquote::before {
+    content:"Impact story";
+    content:"Impact story" / "";
+    height:auto;
+    margin-bottom:14px;
+    font:700 13px/1.2 Mukta,system-ui,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--p);
+}
+
+.q figcaption {
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-top:auto;
+    padding-top:18px;
+    border-top:1px solid #d6cbe9;
+    font-size:15px;
+    line-height:1.35;
+}
+
+.q figcaption b {
+    display:block;
+    font-size:16px;
+    color:var(--ink);
+}
+
+.q .av {
+    flex:0 0 46px;
+    width:46px;
+    height:46px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--p);
+    color:#fff;
+    font-weight:700;
+    font-size:16px;
 }
 
 .inv .row {
@@ -228,7 +229,8 @@ ul.tl {
     }
 
     .pg,
-    .nw {
+    .nw,
+    .q {
         flex-basis:82%;
     }
 
@@ -243,7 +245,6 @@ ul.tl {
     }
 
 }
-
 
 /* Impact: 10 tiles (5 per row on desktop) and the 1999 / 2013 milestones */
 .grid8.ten {
@@ -301,4 +302,172 @@ ul.tl {
     .grid8.ten .t b {
         font-size:30px;
     }
+}
+
+/* ---------- Awards (cards) ---------- */
+
+.aw {
+    background:var(--pl);
+}
+
+.awc {
+    list-style:none;
+    margin:30px 0 0;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.awc li {
+    background:#fff;
+    border:1px solid var(--ln);
+    border-top:4px solid var(--o);
+    border-radius:3px;
+    padding:24px 22px 26px;
+}
+
+.awc .tag {
+    display:inline-block;
+    background:var(--p);
+    color:#fff;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:.04em;
+    padding:3px 14px;
+    border-radius:20px;
+}
+
+.awc h4 {
+    font-size:19px;
+    margin:16px 0 6px;
+}
+
+.awc p {
+    margin:0;
+    font-size:15px;
+}
+
+/* ---------- Journey (timeline on a dark band) ---------- */
+
+.jr {
+    background:var(--pd);
+    color:#d9cff0;
+}
+
+.jr .eyebrow {
+    color:#ffb27a;
+}
+
+.jr h2 {
+    color:#fff;
+}
+
+.jt {
+    list-style:none;
+    margin:48px 0 0;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    position:relative;
+}
+
+.jt::before {
+    content:"";
+    position:absolute;
+    top:11px;
+    left:0;
+    right:0;
+    height:3px;
+    background:rgba(255,255,255,.28);
+}
+
+.jt li {
+    position:relative;
+    padding:46px 22px 0 0;
+}
+
+.jt li::before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background:var(--o);
+    border:5px solid var(--pd);
+    box-sizing:border-box;
+}
+
+.jt b {
+    display:block;
+    font-size:30px;
+    line-height:1.1;
+    color:#ffb27a;
+    margin-bottom:8px;
+}
+
+.jt h4 {
+    font-size:17px;
+    color:#fff;
+}
+
+.jt p {
+    margin:8px 0 0;
+    font-size:15px;
+}
+
+@media (max-width:1100px) {
+    .awc {
+        grid-template-columns:1fr 1fr;
+    }
+
+    .q {
+        flex-basis:calc((100% - 24px)/2);
+    }
+}
+
+@media (max-width:860px) {
+    .jt {
+        grid-template-columns:1fr;
+        margin-top:32px;
+    }
+
+    .jt::before {
+        top:0;
+        bottom:0;
+        left:11px;
+        right:auto;
+        width:3px;
+        height:auto;
+    }
+
+    .jt li {
+        padding:0 0 30px 52px;
+    }
+
+    .jt li:last-child {
+        padding-bottom:0;
+    }
+
+    .jt li::before {
+        top:2px;
+    }
+
+    .jt b {
+        font-size:26px;
+    }
+}
+
+@media (max-width:560px) {
+    .awc {
+        grid-template-columns:1fr;
+    }
+}
+
+/* Hindi label for the "Impact story" tag (it is CSS text, so the translator cannot reach it) */
+html[lang=hi] .q.story blockquote::before {
+    content:"प्रभाव-कथा";
+    content:"प्रभाव-कथा" / "";
 }

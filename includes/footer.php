@@ -25,10 +25,14 @@ $scripts = array_merge(['js/main.js'], array_map(fn($n) => "js/pages/$n.js", $pa
         </div>
     </footer>
 
-    <script>window.SITE = { assets: "<?= e(BASE_URL) ?>/assets/" };</script>
+    <script>window.SITE = { assets: "<?= e(BASE_URL) ?>/assets/", lang: "<?= e(current_lang()) ?>" };</script>
 <?php foreach ($scripts as $file): ?>
     <script src="<?= asset($file) ?>" defer></script>
 <?php endforeach; ?>
 </body>
 
 </html>
+<?php
+if (current_lang() !== 'en' && ob_get_level() > 0) {
+    ob_end_flush();   // sends the translated page
+}

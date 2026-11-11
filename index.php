@@ -12,7 +12,7 @@ $page = [
 require INC . '/header.php';
 ?>
 <section class="hero">
-    <div class="w hero-w">
+    <div class="w">
         <h1>Supporting Rural Communities Through Healthcare and Education.</h1>
         <p>Rooted in Uttarakhand’s villages since 1999, we bring affordable primary and secondary healthcare,
             life-saving heart treatment and education for girls.</p>
@@ -94,72 +94,53 @@ require INC . '/header.php';
         </div>
     </div>
 </section>
-<section class="aw">
-    <div class="w two">
-        <div>
-            <h3>Awards &amp; Recognition</h3>
-            <ul class="tl scr">
-                <li><b>2029</b>
-                    <div>
-                        <h4>President-Elect, IACTS</h4>
-                        <p>Indian Association of Cardiovascular Thoracic Surgeons.</p>
-                    </div>
-                </li>
-                <li><b>2006</b>
-                    <div>
-                        <h4>Lifetime Achievement Award</h4>
-                        <p>Presented to Dr. O. P. Yadava by Dr. A. P. J. Abdul Kalam.</p>
-                    </div>
-                </li>
-                <li><b>National</b>
-                    <div>
-                        <h4>Dr. B. C. Roy National Award</h4>
-                        <p>Awarded to the Foundation’s founder, Dr. O. P. Yadava.</p>
-                    </div>
-                </li>
-                <li><b>Editor</b>
-                    <div>
-                        <h4>Editor-in-Chief</h4>
-                        <p>Indian Journal of Thoracic and Cardiovascular Surgery and Cardiology Today.</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <h3>Our Journey</h3>
-            <ul class="tl scr">
-                <li><b>1992</b>
-                    <div>
-                        <h4>Pioneered Total Arterial Myocardial Revascularisation in India</h4>
-                        <p></p>
-                    </div>
-                </li>
-                <li><b>1999</b>
-                    <div>
-                        <h4>Free consultations begin in Kasardevi, Almora</h4>
-                        <p></p>
-                    </div>
-                </li>
-                <li><b>2013</b>
-                    <div>
-                        <h4>Uttarayana Foundation formally registered</h4>
-                        <p></p>
-                    </div>
-                </li>
-                <li><b>2020</b>
-                    <div>
-                        <h4>COVID-19 response</h4>
-                        <p>Hospital space, ventilators, ambulances and direct financial aid to families.</p>
-                    </div>
-                </li>
-                <li><b>2021</b>
-                    <div>
-                        <h4>Nai-Umang launched</h4>
-                        <p>42 girls supported towards higher education and independent living.</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+<section class="aw" id="awards">
+    <div class="w">
+        <span class="eyebrow">Recognition</span>
+        <h2>Awards &amp; Recognition</h2>
+        <ul class="awc">
+            <li><span class="tag">2029</span>
+                <h4>President-Elect, IACTS</h4>
+                <p>Indian Association of Cardiovascular Thoracic Surgeons.</p>
+            </li>
+            <li><span class="tag">2006</span>
+                <h4>Lifetime Achievement Award</h4>
+                <p>Presented to Dr. O. P. Yadava by Dr. A. P. J. Abdul Kalam.</p>
+            </li>
+            <li><span class="tag">National</span>
+                <h4>Dr. B. C. Roy National Award</h4>
+                <p>Awarded to the Foundation’s founder, Dr. O. P. Yadava.</p>
+            </li>
+            <li><span class="tag">Editor</span>
+                <h4>Editor-in-Chief</h4>
+                <p>Indian Journal of Thoracic and Cardiovascular Surgery and Cardiology Today.</p>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="jr" id="journey">
+    <div class="w">
+        <span class="eyebrow">Since 1992</span>
+        <h2>Our Journey</h2>
+        <ol class="jt">
+            <li><b>1992</b>
+                <h4>Pioneered Total Arterial Myocardial Revascularisation in India</h4>
+            </li>
+            <li><b>1999</b>
+                <h4>Free consultations begin in Kasardevi, Almora</h4>
+            </li>
+            <li><b>2013</b>
+                <h4>Uttarayana Foundation formally registered</h4>
+            </li>
+            <li><b>2020</b>
+                <h4>COVID-19 response</h4>
+                <p>Hospital space, ventilators, ambulances and direct financial aid to families.</p>
+            </li>
+            <li><b>2021</b>
+                <h4>Nai-Umang launched</h4>
+                <p>42 girls supported towards higher education and independent living.</p>
+            </li>
+        </ol>
     </div>
 </section>
 <section>
@@ -202,20 +183,34 @@ require INC . '/header.php';
 </section>
 <section>
     <div class="w">
-        <h2>Testimonials</h2><br>
-        <div class="sl"><button class="nb pv" aria-label="Previous">‹</button>
+        <h2>Testimonials</h2>
+        <div class="sl tst"><button class="nb pv" aria-label="Previous">‹</button>
             <div class="tr">
-                <div class="q">“Dr O P Yadav and his organisation, Uttarayana Foundation, have done outstanding work
-                    in Almora district and neighbouring districts over the past several years for healthcare,
-                    particularly heart disease prevention.”<small><b>Vinod Kumar Suman</b>, Former District
-                        Magistrate, Almora</small></div>
-                <div class="q">“My son Ayansh was born with a hole in his heart… within two days my son’s surgery
-                    was done, completely free. I am grateful to Dr O P Yadav, Mahipal ji, and the whole
-                    team.”<small><b>Karan Bhandari</b>, father of Ayansh Bhandari, age 6</small></div>
-                <div class="q">“[Placeholder: add a real quote from a patient, family or
-                    partner.]”<small><b>Name</b>, role</small></div>
-                <div class="q">“[Placeholder: add a real quote from a patient, family or
-                    partner.]”<small><b>Name</b>, role</small></div>
+                <figure class="q">
+                    <blockquote>Dr O P Yadav and his organisation, Uttarayana Foundation, have done outstanding work in
+                        Almora district and neighbouring districts over the past several years for healthcare,
+                        particularly heart disease prevention.</blockquote>
+                    <figcaption><span class="av" aria-hidden="true">VS</span><span><b>Vinod Kumar Suman</b>Former
+                            District Magistrate, Almora</span></figcaption>
+                </figure>
+                <figure class="q">
+                    <blockquote>My son Ayansh was born with a hole in his heart… within two days my son’s surgery was
+                        done, completely free. I am grateful to Dr O P Yadav, Mahipal ji, and the whole team.</blockquote>
+                    <figcaption><span class="av" aria-hidden="true">KB</span><span><b>Karan Bhandari</b>Father of
+                            Ayansh Bhandari, age 6</span></figcaption>
+                </figure>
+                <figure class="q story">
+                    <blockquote>Diagnosed with a congenital heart defect at a Foundation camp at the age of four, Suhani
+                        received free cardiac surgery in Delhi within days.</blockquote>
+                    <figcaption><span class="av" aria-hidden="true">S</span><span><b>Suhani’s story</b>Free heart
+                            surgery after a Foundation camp</span></figcaption>
+                </figure>
+                <figure class="q story">
+                    <blockquote>Forty-two girls from Balika Sadan, Almora, have received professional training in Delhi
+                        and support towards higher education and independent living.</blockquote>
+                    <figcaption><span class="av" aria-hidden="true">N</span><span><b>Nai-Umang</b>Our programme for
+                            girls’ education and training</span></figcaption>
+                </figure>
             </div><button class="nb nx" aria-label="Next">›</button>
         </div>
     </div>
