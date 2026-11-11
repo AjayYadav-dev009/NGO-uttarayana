@@ -167,6 +167,20 @@ require INC . '/header.php';
     </div>
 </section>
 
+<div class="sl gl"><button class="nb pv" aria-label="Previous">‹</button>
+    <div class="tr"><img
+            src="<?= asset('img/slide/slide1.webp') ?>"
+            alt="Foundation field work" loading="lazy"><img
+            src="<?= asset('img/slide/slide2.webp') ?>"
+            alt="Foundation field work" loading="lazy"><img
+            src="<?= asset('img/slide/slide3.webp') ?>"
+            alt="Foundation field work" loading="lazy"><img
+            src="<?= asset('img/slide/slide4.webp') ?>"
+            alt="Foundation field work" loading="lazy"><img
+            src="<?= asset('img/slide/slide5.webp') ?>"
+            alt="Foundation field work" loading="lazy"></div><button class="nb nx" aria-label="Next">›</button>
+</div>
+
 
 
 <dialog id="lb" aria-label="Photo viewer">

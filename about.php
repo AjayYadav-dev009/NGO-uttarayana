@@ -46,7 +46,7 @@ require INC . '/header.php';
             </ul>
         </div>
         <figure class="ph2" style="margin:0">
-            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/481918182_645916227959362_2590371648645501543_n-2uhf2pMfBHUuLF44.jpg"
+            <img src="<?= asset('img/about/about1.webp') ?>"
                 alt="Foundation team and villagers during field work in Kumaon" loading="lazy">
             <span>Field work in Kumaon, Uttarakhand.</span>
         </figure>
@@ -106,22 +106,22 @@ require INC . '/header.php';
         <div class="sl"><button class="nb pv" aria-label="Previous">‹</button>
             <div class="tr">
                 <a class="nw" href="#"><img
-                        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/baby-suhani--dainik-jagran-9xy1G1vn35qDAMFX.png"
+                        src="<?= asset('img/press/press-1.webp') ?>"
                         alt="Dainik Jagran clipping about Suhani's free heart surgery"
                         loading="lazy"><span>Diagnosed with CHD at a Foundation camp at age four, Suhani received
                         free cardiac surgery in Delhi within days.</span></a>
                 <a class="nw" href="#"><img
-                        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/covid-news-2nBUZA1DVro1Bslh.png"
+                        src="<?= asset('img/press/press-2.webp') ?>"
                         alt="Newspaper clipping about the Foundation's COVID-19 response"
                         loading="lazy"><span>During COVID-19 the Foundation offered hospital space, ventilators and
                         ambulances to the state government.</span></a>
                 <a class="nw" href="#"><img
-                        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/22-12-2021-02-ZDDIaXNrsZtks51C.jpg"
+                        src="<?= asset('img/press/press-3.webp') ?>"
                         alt="Newspaper clipping about Uttarayana Hospital, Papershailly"
                         loading="lazy"><span>Uttarayana Hospital: free care for rural communities, closer to
                         home.</span></a>
                 <a class="nw" href="#"><img
-                        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/nai-umang-2-CurYZCJEEkFh9sLa.png"
+                        src="<?= asset('img/press/press-4.webp') ?>"
                         alt="Newspaper clipping about the Nai-Umang programme" loading="lazy"><span>Nai-Umang: 42
                         girls from Balika Sadan, Almora, receive professional training in Delhi.</span></a>
             </div><button class="nb nx" aria-label="Next">›</button>
@@ -173,15 +173,15 @@ require INC . '/header.php';
 
 <div class="sl gl"><button class="nb pv" aria-label="Previous">‹</button>
     <div class="tr"><img
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/481918182_645916227959362_2590371648645501543_n-2uhf2pMfBHUuLF44.jpg"
+            src="<?= asset('img/slide/slide1.webp') ?>"
             alt="Foundation field work" loading="lazy"><img
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/481211440_650398277511157_8725831068823555168_n-Bm9BLd6GdkpJNkdw.jpg"
+            src="<?= asset('img/slide/slide2.webp') ?>"
             alt="Foundation field work" loading="lazy"><img
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/480569165_641836968367288_5483151691071154577_n-zof0wUYQ00U6wcFT.jpg"
+            src="<?= asset('img/slide/slide3.webp') ?>"
             alt="Foundation field work" loading="lazy"><img
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/481164465_650398444177807_8551361197916948722_n-CfeDedJLHyBdOMcM.jpg"
+            src="<?= asset('img/slide/slide4.webp') ?>"
             alt="Foundation field work" loading="lazy"><img
-            src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/481087133_645916224626029_8015487658597098639_n-QSpLW2fuQrMJpilz.jpg"
+            src="<?= asset('img/slide/slide5.webp') ?>"
             alt="Foundation field work" loading="lazy"></div><button class="nb nx" aria-label="Next">›</button>
 </div>
 
