@@ -4,7 +4,7 @@
     position:relative;
     color:#fff;
     padding:64px 0 56px;
-    background:linear-gradient(90deg,rgba(47,26,84,.94) 0%,rgba(47,26,84,.78) 55%,rgba(47,26,84,.35) 100%),url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/uyzQ6zhWkYkr7bfm/uttarayana-faith-foundation-tNiry7UUvq3qfvPc.png) center/cover;
+    background:linear-gradient(90deg,rgba(47,26,84,.94) 0%,rgba(47,26,84,.78) 55%,rgba(47,26,84,.35) 100%),url(../../banner/uttarayana-faith-foundation-tNiry7UUvq3qfvPc.webp) center/cover;
 }
 
 .ph p {
@@ -496,4 +496,3 @@ dialog::backdrop {
     }
 
 }
-

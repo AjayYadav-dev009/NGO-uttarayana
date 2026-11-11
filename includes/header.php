@@ -25,7 +25,7 @@ $current = $page['slug'] ?? '';
     </div>
     <header class="nav">
         <div class="w"><a href="<?= url('home') ?>"><img
-                    src="<?= e(SITE_LOGO) ?>"
+                    src="<?= asset(SITE_LOGO) ?>"
                     alt="<?= e(SITE_NAME) ?>"></a>
             <ul id="menu">
 <?php foreach (NAV as $slug => $item): ?>

@@ -67,7 +67,7 @@ require INC . '/header.php';
         <p class="sub">Healthcare, hope and opportunity for the state’s most vulnerable communities.</p>
         <div class="sl"><button class="nb pv" aria-label="Previous">‹</button>
             <div class="tr"><a class="pg" href="<?= url('programs', 'hospital') ?>"><img
-                        src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/uttarayana-faith-foundation-tNiry7UUvq3qfvPc.png"
+                        src="<?= asset('banner/uttarayana-faith-foundation-tNiry7UUvq3qfvPc.webp') ?>"
                         alt="Uttarayana Hospital" loading="lazy">
                     <h3>Uttarayana Hospital</h3>
                     <p>Free care for rural communities at Papersali, Almora. Better access, closer to home.</p>

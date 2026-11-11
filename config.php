@@ -6,7 +6,7 @@
  */
 
 const SITE_NAME   = 'Uttarayana Foundation';
-const SITE_LOGO   = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/uttarayana-logo-v616Vkv8vh5mG4ek.png';
+const SITE_LOGO   = 'img/logo/uttarayana-logo-v616Vkv8vh5mG4ek.png';   // path inside /assets (used with asset())
 const SITE_LANG   = 'en';
 const ASSET_VER   = true;   // append ?v=<file-modified-time> to CSS/JS/image URLs (cache busting)
 
@@ -50,4 +50,4 @@ const FOOTER_HOSPITAL = 'Village Bhalura, Post: NTD, Papershailly, Almora, Uttar
 /* Contact page */
 const CONTACT_PHONE = '98106 01252';
 const MAP_QUERY     = 'Uttarayana Hospital, Papershailly, Almora, Uttarakhand';   // what the Google map shows
-const CONTACT_IMAGE = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=900,fit=crop/uyzQ6zhWkYkr7bfm/uttarayana-faith-foundation-tNiry7UUvq3qfvPc.png';
+const CONTACT_IMAGE = 'banner/uttarayana-faith-foundation-tNiry7UUvq3qfvPc.webp';   // path inside /assets (stand-in photo; replace with the hospital photo)

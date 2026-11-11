@@ -8,7 +8,7 @@ $scripts = array_merge(['js/main.js'], array_map(fn($n) => "js/pages/$n.js", $pa
         <div class="w">
             <div class="f">
                 <div><img
-                        src="<?= e(SITE_LOGO) ?>"
+                        src="<?= asset(SITE_LOGO) ?>"
                         alt="<?= e(SITE_NAME) ?>"><?= implode('<br>', array_map('e', FOOTER_REGISTRATION)) ?></div>
                 <div><b>Sitemap</b><?php
                     $links = [];

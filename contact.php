@@ -26,7 +26,7 @@ require INC . '/header.php';
 <section id="message">
     <div class="w">
         <div class="cg">
-            <img class="cimg" src="<?= e(CONTACT_IMAGE) ?>" alt="Uttarayana Hospital, Papershailly, Almora" loading="lazy">
+            <img class="cimg" src="<?= asset(CONTACT_IMAGE) ?>" alt="Uttarayana Hospital, Papershailly, Almora" loading="lazy">
             <div>
                 <h2>Send a message</h2>
                 <p class="sub" style="margin-bottom:20px">Questions about our work, a visit or a partnership? Fill in the form and we will get back to you.</p>

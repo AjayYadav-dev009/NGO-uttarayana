@@ -34,7 +34,7 @@ html {
     display:flex;
     align-items:center;
     color:#fff;
-    background:linear-gradient(90deg,rgba(47,26,84,.92) 0%,rgba(47,26,84,.7) 45%,rgba(47,26,84,.1) 100%),url(https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1920,fit=crop/uyzQ6zhWkYkr7bfm/uttarayana-faith-foundation-tNiry7UUvq3qfvPc.png) center/cover;
+    background:linear-gradient(90deg,rgba(47,26,84,.92) 0%,rgba(47,26,84,.7) 45%,rgba(47,26,84,.1) 100%),url(../../banner/uttarayana-faith-foundation-tNiry7UUvq3qfvPc.webp) center/cover;
 }
 
 .hero .w {
