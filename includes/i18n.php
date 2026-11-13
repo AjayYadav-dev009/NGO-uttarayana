@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Language switching (English / Hindi).
  *
@@ -84,7 +85,7 @@ function i18n_filter(string $html, int $phase = 0): string
             $part = $out;
         }
         // 2) attributes people read or hear
-        $out = preg_replace_callback('/\b(alt|title|placeholder|aria-label|data-suffix|content)="([^"]*)"/u', function ($m) use ($dict) {
+        $out = preg_replace_callback('/\b(alt|title|placeholder|aria-label|data-suffix|data-cap|content)="([^"]*)"/u', function ($m) use ($dict) {
             $t = i18n_lookup($m[2], $dict);
             return $t === null ? $m[0] : $m[1] . '="' . $t . '"';
         }, $part);

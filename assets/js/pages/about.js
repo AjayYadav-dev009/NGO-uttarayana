@@ -53,8 +53,8 @@ var ASSETS = (window.SITE && window.SITE.assets) || 'assets/';
                 tp.setAttribute('aria-labelledby', 'tab' + i);
                 var has = !!m.img;
                 tp.className = 'tp' + (has ? ' has' : ' noimg');
-                tp.innerHTML = '<div><div class="yr">' + m.y + '</div><span class="loc">' + m.loc + '</span><h3>' + m.t + '</h3>' + m.p.map(function (x) { return '<p>' + x + '</p>' }).join('') + '</div>' +
-                    (has ? '<figure><img src="' + m.img + '" alt="' + m.alt + '" onerror="this.closest(\'.tp\').className=\'tp noimg\'"></figure>' : '');
+                tp.innerHTML = '<div><div class="yr">' + m.y + '</div><span class="loc">' + T(m.loc) + '</span><h3>' + T(m.t) + '</h3>' + m.p.map(function (x) { return '<p>' + T(x) + '</p>' }).join('') + '</div>' +
+                    (has ? '<figure><img src="' + m.img + '" alt="' + T(m.alt) + '" onerror="this.closest(\'.tp\').className=\'tp noimg\'"></figure>' : '');
                 pv.disabled = i === 0; nx.disabled = i === MILES.length - 1;
                 cnt.textContent = (i + 1) + ' of ' + MILES.length;
                 bar.style.width = ((i + 1) / MILES.length * 100) + '%';
@@ -73,16 +73,16 @@ var ASSETS = (window.SITE && window.SITE.assets) || 'assets/';
         (function () {
             var flt = document.getElementById('flt'), gr = document.getElementById('groups'), dlg = document.getElementById('dlg');
             var idx = 0, last = null;
-            var all = document.createElement('button'); all.type = 'button'; all.textContent = 'Everyone'; all.setAttribute('aria-pressed', 'true'); all.dataset.g = ''; flt.appendChild(all);
+            var all = document.createElement('button'); all.type = 'button'; all.textContent = T('Everyone'); all.setAttribute('aria-pressed', 'true'); all.dataset.g = ''; flt.appendChild(all);
             GROUPS.forEach(function (g) {
-                var b = document.createElement('button'); b.type = 'button'; b.textContent = g.name; b.setAttribute('aria-pressed', 'false'); b.dataset.g = g.id; flt.appendChild(b);
+                var b = document.createElement('button'); b.type = 'button'; b.textContent = T(g.name); b.setAttribute('aria-pressed', 'false'); b.dataset.g = g.id; flt.appendChild(b);
                 var sec = document.createElement('div'); sec.className = 'grp'; sec.dataset.g = g.id;
-                sec.innerHTML = '<h3>' + g.name + '</h3><div class="cards"></div>';
+                sec.innerHTML = '<h3>' + T(g.name) + '</h3><div class="cards"></div>';
                 var cards = sec.querySelector('.cards');
                 PEOPLE.forEach(function (p, i) {
                     if (p.g !== g.id) return;
                     var c = document.createElement('button'); c.type = 'button'; c.className = 'pc';
-                    c.innerHTML = '<img src="' + p.img + '" alt=""><span><strong>' + p.n + '</strong><small>' + p.r + '</small><em>Read more →</em></span>';
+                    c.innerHTML = '<img src="' + p.img + '" alt=""><span><strong>' + T(p.n) + '</strong><small>' + T(p.r) + '</small><em>' + T('Read more →') + '</em></span>';
                     c.addEventListener('click', function () { last = c; show(i); if (!dlg.open) dlg.showModal() });
                     cards.appendChild(c);
                 });
@@ -95,9 +95,9 @@ var ASSETS = (window.SITE && window.SITE.assets) || 'assets/';
             });
             function show(i) {
                 idx = (i + PEOPLE.length) % PEOPLE.length; var p = PEOPLE[idx];
-                var im = document.getElementById('di'); im.src = p.img; im.alt = p.n;
-                document.getElementById('dn').textContent = p.n; document.getElementById('dr').textContent = p.r;
-                document.getElementById('db').innerHTML = p.b.map(function (x) { return '<p>' + x + '</p>' }).join('');
+                var im = document.getElementById('di'); im.src = p.img; im.alt = T(p.n);
+                document.getElementById('dn').textContent = T(p.n); document.getElementById('dr').textContent = T(p.r);
+                document.getElementById('db').innerHTML = p.b.map(function (x) { return '<p>' + T(x) + '</p>' }).join('');
             }
             document.getElementById('dp').addEventListener('click', function () { show(idx - 1) });
             document.getElementById('dnx').addEventListener('click', function () { show(idx + 1) });

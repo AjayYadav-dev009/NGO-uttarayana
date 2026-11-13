@@ -22,7 +22,8 @@ includes/
   header.php            top bar, nav, optional page banner ($page['hero']) and "on this page" menu ($page['subnav']), opens <main>
   footer.php            closes </main>, footer, scripts (main.js + page js)
   i18n.php              English/Hindi switch: cookie, ?lang=, and the output translator i18n_filter()
-lang/hi.php             Hindi dictionary (English text -> Hindi)
+lang/hi.php             Hindi dictionary for page HTML (English text -> Hindi)
+lang/hi_js.php          Hindi dictionary for text created by JavaScript (about.js data, form messages); sent to the page as window.SITE.t
 assets/css/global.css           fonts (@font-face), :root colours, base, header, footer, shared components (incl. forms .fm)
 assets/css/pages/<page>.css     rules used by ONE page only (index, about, support, contact; programs has none)
 assets/js/main.js               shared behaviour (menu, scroll-spy, counters, copy buttons, sliders, form.fm handler)
@@ -128,7 +129,10 @@ Every `<section>` is `<section id="..."><div class="w">…</div></section>`. `.w
 - Not translated (no entry) → stays English. `<script>` and `<style>` are never touched.
 - The visitor's choice is stored in the `lang` cookie; `?lang=hi` / `?lang=en` switches and redirects to the clean URL. `<html lang>` follows the choice; JS can read `window.SITE.lang`.
 - Text created by CSS (`content:`) or JavaScript is not reachable by the dictionary: use `html[lang=hi] …` CSS overrides (example: the "Impact story" tag in `pages/index.css`) or `window.SITE.lang` in JS.
-- To translate a page: render it, list its English text nodes, add pairs to `lang/hi.php`. **Done so far: header, footer, top bar, Home, Contact. Not yet: About, Programs, Support (and all JS-generated text, e.g. About team data, form error messages).**
+- To translate a page: render it, list its English text nodes, add pairs to `lang/hi.php`. **All five pages (Home, About, Programs, Support, Contact), header, footer and top bar are translated.** Lightbox captions (`data-cap`) are translated like `alt`.
+- Text made by JavaScript is not reachable by the filter. Write it in the script as `T('English text')` (helper in `main.js`) and add the same English string as a key in `lang/hi_js.php`. Keep `<b>` tags in the same places. About-page team/timeline data already works this way (the data arrays stay English; `T()` is applied where they are displayed).
+- A text node that holds only `.` (a sentence end after a `<b>` or `<a>`) is mapped to the Hindi `।` globally. Avoid other lone-punctuation nodes.
+- Hindi wording is a first draft: have a Hindi speaker review it, especially names, titles and place names.
 - Dynamic footer year entry is built at the end of `lang/hi.php`; keep it.
 
 ## 7. How to deliver changes (important)
@@ -148,7 +152,7 @@ Every `<section>` is `<section id="..."><div class="w">…</div></section>`. `.w
 
 ## 9. Known placeholders / open items
 
-- Hindi pending for About, Programs, Support, About-page JS data, and JS form/validation messages. Place-name spellings in Hindi (पेपरसाली, भलूरा, दिनापानी, माट) and all Hindi wording should be reviewed by a Hindi speaker / the client before launch.
+- Hindi is complete for all pages; wording is a first draft. Place-name spellings in Hindi (पेपरसाली, भलूरा, दिनापानी, माट) and all Hindi wording should be reviewed by a Hindi speaker / the client before launch.
 - Header and footer are shared by design; if the client wants a different header/footer on some page, discuss before changing `includes/`.
 - Images are now all local. Before launch run `grep -rn zyrosite .` (should return nothing) and replace the 160px team photos in `assets/img/people/` with larger originals (600px+) if the client wants sharper cards.
 - Home page news cards (`.nw`) link to `#` (real article URLs needed).
@@ -177,3 +181,4 @@ Name: Uttarayana Foundation · Registered under the Societies Registration Act, 
 - About page people: cards redesigned in `pages/about.css` (vertical, 150px photo, larger text, purple top border; on hover the border drops and fills the card purple with white text; reduced-motion respected). Profile dialog (`#dlg`) redesigned to match (centred, 150px photo, scrolling body, fixed footer buttons). No markup or JS changes.
 - About page journey: removed the leftover `HOSP` remote base URL from `assets/js/pages/about.js`; timeline images now come straight from `ASSETS + 'img/about/journey-N.webp'`.
 - All remaining photos moved local: `img/about/`, `img/press/`, `img/slide/` (and the Home founder/news images); `about.php` uses `asset()` throughout.
+- Hindi switch extended to About, Programs and Support: ~200 new entries in `lang/hi.php`; new `lang/hi_js.php` + `window.SITE.t` (in `footer.php`) + `T()` helper (`main.js`) for JS-generated text (about.js timeline/team/dialog, copy button, form messages); `i18n.php` now also translates `data-cap` (lightbox captions).

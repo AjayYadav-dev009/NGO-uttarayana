@@ -1,6 +1,9 @@
 /* Uttarayana Foundation – global behaviour, loaded on every page.
    Each block quietly does nothing when its markup is not on the page. */
 
+/* ---------- T('English text'): Hindi version for text made by JavaScript (dictionary comes from lang/hi_js.php) ---------- */
+window.T = function (s) { var d = (window.SITE && window.SITE.t) || {}; return d[s] || s };
+
 /* ---------- Mobile menu (burger button) ---------- */
 (function () {
     var b = document.querySelector('.mb'), m = document.getElementById('menu');
@@ -42,7 +45,7 @@
     document.querySelectorAll('.cp').forEach(function (b) {
         b.addEventListener('click', function () {
             var v = b.dataset.copy;
-            function done() { b.textContent = 'Copied'; b.classList.add('ok'); if (msg) msg.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; b.classList.remove('ok') }, 1600) }
+            function done() { b.textContent = T('Copied'); b.classList.add('ok'); if (msg) msg.textContent = T('Copied'); setTimeout(function () { b.textContent = T('Copy'); b.classList.remove('ok') }, 1600) }
             function fallback() { var t = document.createElement('textarea'); t.value = v; document.body.appendChild(t); t.select(); try { document.execCommand('copy'); done() } catch (e) { } t.remove() }
             if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(done, fallback); else fallback();
         });
@@ -98,7 +101,7 @@
             var ok = true, first = null, msg = f.querySelector('.msg');
             f.querySelectorAll('[required]').forEach(function (i) {
                 var er = i.parentNode.querySelector('.er'), bad = !i.value.trim() || (i.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(i.value.trim()));
-                i.setAttribute('aria-invalid', bad); er.textContent = bad ? (i.type === 'email' ? 'Enter a valid email address.' : 'This field is required.') : '';
+                i.setAttribute('aria-invalid', bad); er.textContent = bad ? (i.type === 'email' ? T('Enter a valid email address.') : T('This field is required.')) : '';
                 if (bad) { ok = false; first = first || i }
             });
             if (!ok) { first.focus(); msg.textContent = ''; return }
@@ -106,7 +109,7 @@
             f.querySelectorAll('input,select,textarea').forEach(function (i) { if (i.value.trim()) lines.push(i.name + ': ' + i.value.trim()) });
             var name = (f.querySelector('[name=Name],[name=Organisation]') || {}).value || '';
             var url = 'mailto:' + TO + '?subject=' + encodeURIComponent(f.dataset.kind + ' enquiry from ' + name) + '&body=' + encodeURIComponent(lines.join('\n'));
-            msg.textContent = 'Thank you. Your email app should open with your message ready to send. If it does not, write to ' + TO + '.';
+            msg.textContent = T('Thank you. Your email app should open with your message ready to send. If it does not, write to ') + TO + T('.');
             location.href = url;
         });
         f.addEventListener('input', function (e) { if (e.target.getAttribute('aria-invalid') === 'true') { e.target.setAttribute('aria-invalid', 'false'); var er = e.target.parentNode.querySelector('.er'); if (er) er.textContent = '' } });
