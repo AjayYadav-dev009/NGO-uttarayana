@@ -47,6 +47,13 @@ const FOOTER_REGISTRATION = [
 const FOOTER_OFFICE   = 'Village Maat, Kasardevi, Post: Dinapani, Almora, Uttarakhand 263601';
 const FOOTER_HOSPITAL = 'Village Bhalura, Post: NTD, Papershailly, Almora, Uttarakhand 263601';
 
+/* WhatsApp chat button (floating, bottom-right on every page). Number = country code + number, digits only. */
+const WHATSAPP_NUMBER = '919810601252';   // CHECK: must be a number that is active on WhatsApp
+const WHATSAPP_TEXT   = [
+    'en' => 'Hello Uttarayana Foundation, I would like to know more about your work.',
+    'hi' => 'नमस्ते उत्तरायण फाउंडेशन, मैं आपके कार्य के बारे में अधिक जानना चाहता/चाहती हूँ।'
+];
+
 /* Contact page */
 const CONTACT_PHONE = '98106 01252';
 const MAP_QUERY     = 'Uttarayana Hospital, Papershailly, Almora, Uttarakhand';   // what the Google map shows

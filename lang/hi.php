@@ -357,6 +357,7 @@ $d = [
     'Patients and families gathered with the Foundation team.' => 'फाउंडेशन की टीम के साथ एकत्र मरीज़ और उनके परिवार।',
     'Newspaper report (Dainik Jagran): “Suhani will live”. A young girl with a heart defect received free surgery in Delhi.' => 'समाचार पत्र रिपोर्ट (दैनिक जागरण): “सुहानी जिएगी”। हृदय रोग से पीड़ित एक बच्ची की दिल्ली में निःशुल्क सर्जरी हुई।',
     'Newspaper reports, December 2021: seven girls from Almora reach the National Heart Institute, Delhi, under the Nai-Umang programme.' => 'समाचार पत्र रिपोर्टें, दिसंबर 2021: नई उमंग कार्यक्रम के अंतर्गत अल्मोड़ा की सात बालिकाएँ नेशनल हार्ट इंस्टीट्यूट, दिल्ली पहुँचीं।',
+    'Chat with us on WhatsApp' => 'व्हाट्सऐप पर हमसे बात करें',
 ];
 
 /* the footer year changes every year */
